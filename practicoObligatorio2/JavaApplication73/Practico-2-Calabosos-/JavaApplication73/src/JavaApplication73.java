@@ -31,5 +31,14 @@ class SuperHeroe {
     public boolean estaVivo() {
         return vida > 0;
     }
+// Método para que el superhéroe ataque a un villano
+    public void atacarVillano(Villano villano) {
+        int danio = this.fuerza;
+        villano.recibirDanio(danio);
+        System.out.println(this.nombre + " ataca a " + villano.getNombre() + " causando " + danio + " de daño.");
+        if (!villano.estaVivo()) {
+            System.out.println(villano.getNombre() + " ha sido derrotado.");
+        }
+    }
 }
 
